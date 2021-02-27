@@ -2,6 +2,7 @@ import { createContext, useState, ReactNode, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import challenges from '../../challenges.json';
 import LevelUpModal from '../components/LevelUpModal';
+import { isMobile } from 'react-device-detect';
 
 interface Challenge {
     type: 'body' | 'eye';
@@ -68,9 +69,9 @@ export function ChallengesProvider({ children, ...rest }: ChallengesProviderProp
 
         new Audio('/notification.mp3').play();
 
-        if (Notification.permission === 'granted') {
-            new Notification('Novo Desafio 🎉', {
-                body: `Valendo ${challenge.amount} xp!`
+        if (!isMobile && Notification.permission === 'granted') {
+            new Notification('Novo desafio :tada: ', {
+                body: `Valendo ${challenge.amount}xp!`
             })
         }
     }
