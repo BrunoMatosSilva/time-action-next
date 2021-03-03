@@ -23,8 +23,8 @@ export default function Login() {
                     <span>
                         <button
                             type="button"
-                            onClick={() => signIn('google')}>
-                            <img src="/icons/google.svg" alt="google logo" />Sign
+                            onClick={() => signIn('auth0')}>
+                            Sign
                     </button>
                     </span>
                 </div>

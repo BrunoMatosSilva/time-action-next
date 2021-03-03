@@ -53,7 +53,7 @@ export function ChallegensProvider({
     const experienceToNextLevel = Math.pow((level + 1) * 4, 2)
 
     useEffect(() => {
-        async function initialUser() {
+        async function insertUser() {
             await axios.post('/api/insert-user', rest.session.user).then(response => {
                 setLevel(response.data.level)
                 setCurrentExperience(response.data.currentExperience)
@@ -62,7 +62,7 @@ export function ChallegensProvider({
                 setIsUserCharged(true)
             })
         }
-        initialUser()
+        insertUser()
     }, [])
 
     useEffect(() => {

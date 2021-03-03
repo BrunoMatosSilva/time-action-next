@@ -45,14 +45,11 @@ export default function Sidebar() {
                     />
                 </button>
             </footer>
-            {!session &&
-                <button onClick={() => signIn('google')}><img src="icons/enter.svg" alt="Entrar" /></button>
-            }
-            {session &&
-                <button type="button" onClick={signOutMoveOn}>
-                    <img src="icons/exit.svg" alt="Sair" />
-                </button>
-            }
+
+            <button type="button" onClick={signOutMoveOn}>
+                <img src="icons/exit.svg" alt="Sair" />
+            </button>
+
         </aside>
     )
 } 
