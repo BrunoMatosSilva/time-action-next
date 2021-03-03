@@ -1,9 +1,14 @@
 import { signIn } from 'next-auth/client';
+import Head from 'next/head';
 import styles from '../styles/pages/Login.module.css';
 
 export default function Login() {
     return (
         <div className={styles.container}>
+
+            <Head>
+                <title>Login | Time-Action</title>
+            </Head>
             <section>
                 <div>
                     <span>

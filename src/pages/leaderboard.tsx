@@ -24,7 +24,7 @@ export default function LeaderBoard() {
       <div className={styles.container}>
 
         <Head>
-          <title>Leaderboard | move.it</title>
+          <title>Leaderboard | Time-Action</title>
         </Head>
 
         <header>Leaderboard</header>
