@@ -1,0 +1,129 @@
+.container {
+    height: 100vh;
+    max-width: 100%;
+    margin: 0 auto;
+    background: var(--blue-dark);
+    
+
+    display: flex;
+    flex-direction: column;
+}
+
+.container section {
+    flex: 1;
+    background: url('/icons/logobg.svg') no-repeat left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6.25rem;
+    align-content: center;
+}
+
+.container div:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.container div:first-child span {
+    max-height: 120px;
+    display: flex;
+    background: none;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    opacity: 100%;
+}
+
+.container div:first-child img {
+    max-height: 80px;
+    
+}
+
+.container div:first-child h1 {
+    color: var(--white);
+    align-items: center;
+    font-size: 2.5rem;
+    padding: 0.5rem;
+}
+
+.container div:first-child h2 {
+    color: var(--text-highlight);
+    align-items: center;
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    font-weight: 700;
+}
+
+.container div:last-child {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    background: var(--blue);
+    border-radius: 5px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem ;
+}
+
+.container h3 {
+    color: var(--white);
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.container span {
+    display: flex;
+    color: var(--white);
+    justify-content: center;
+    opacity: 50%;
+    margin-bottom: 2rem;
+}
+
+.container div:last-child span img {
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    margin-right: 1rem;
+}
+
+.container span p {
+    align-items: left;
+    padding-top: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.contain div{
+    height: 3rem;
+    max-width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container button {
+    height: 3rem;
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: 5px;
+
+    color: var(--white);
+    background: var(--blue-dark);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: filter 0.2s;
+}
+
+.container button:hover {
+    background: var(--white);
+    color: var(--blue);
+}

@@ -1,19 +1,28 @@
 import { useContext } from 'react';
-import { ChallengesContexts } from '../contexts/ChallengesContexts';
+import { ChallengesContext } from '../contexts/ChallegensContexts';
 import styles from '../styles/components/Profile.module.css';
 
-export default function Profile() {
-    const { level } = useContext(ChallengesContexts)
+interface ProfileProps {
+    session?: {
+        user: {
+            name: string;
+            email: string;
+            image: string;
+        }
+    }
+}
+
+export default function Profile(props: ProfileProps) {
+    const { level } = useContext(ChallengesContext);
 
     return (
         <div className={styles.profileContainer}>
-            <img src="https://github.com/BrunoMatosSilva.png" alt="Bruno Matos" />
+            <img src={props.session.user.image} alt={props.session.user.name} />
             <div>
-                <strong>Bruno Matos Silva</strong>
-
+                <strong>{props.session.user.name}</strong>
                 <p>
-                    <img src="icons/level.svg" alt="level" />
-                    level {level}
+                    <img src="icons/level.svg" alt="Level" />
+              Level {level}
                 </p>
             </div>
         </div>

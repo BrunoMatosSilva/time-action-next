@@ -1,9 +1,9 @@
 import styles from '../styles/components/LevelUpModal.module.css';
 import React, { useContext } from 'react'
-import { ChallengesContexts } from '../contexts/ChallengesContexts';
+import { ChallengesContext } from '../contexts/ChallegensContexts';
 
 export default function LevelUpModal() {
-    const { level, closeLevelUpModal } = useContext(ChallengesContexts);
+    const { level, closeLevelUpModal } = useContext(ChallengesContext);
 
     return (
         <div className={styles.overlay}>

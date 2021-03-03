@@ -36,6 +36,13 @@
 
 }
 
+.container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .container p {
     font-size: 1.25rem;
     color: var(--text);

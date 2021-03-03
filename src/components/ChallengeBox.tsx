@@ -1,20 +1,20 @@
 import { useContext } from 'react';
-import { ChallengesContexts } from '../contexts/ChallengesContexts';
+import { ChallengesContext } from '../contexts/ChallegensContexts';
 import { CountdownContext } from '../contexts/CountdownContexts';
 import styles from '../styles/components/ChallengeBox.module.css';
 
 export default function ChallengeBox() {
-    const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContexts);
-    const { resetCountdown } = useContext(CountdownContext);
+    const { activeChallenge, resetChallenge, completeChallenge } = useContext(ChallengesContext);
+    const { resetCountDown } = useContext(CountdownContext);
 
     function handChallengeSucceeded() {
         completeChallenge();
-        resetCountdown();
+        resetCountDown();
     }
 
     function handChallengeFailed() {
         resetChallenge();
-        resetCountdown();
+        resetCountDown();
     }
 
     return (
