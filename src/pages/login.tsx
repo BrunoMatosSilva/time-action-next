@@ -28,7 +28,8 @@ export default function Login() {
                     <span>
                         <button
                             type="button"
-                            onClick={() => signIn('auth0')}>
+                            onClick={() => signIn('github')}>
+                            <img src='/icons/github.svg' alt="github-icon" />
                             Sign
                     </button>
                     </span>
